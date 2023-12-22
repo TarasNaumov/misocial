@@ -1,3 +1,5 @@
+@import 'helpers/mixins.sass'
+    
 *
     margin: 0
     padding: 0
@@ -15,12 +17,14 @@ body
 .wrapper
     width: calc(100% - 20px)
     margin: auto
+    +media(1100px)
+        width: calc(100% - 50px)
 
 .header-line
     margin-bottom: 60px
 
 header
-    padding-top: 20px
+    padding: 40px 0
     background: linear-gradient(-60deg, rgba(113, 86, 224, 0.8), rgba(134, 198, 208, 0.8)), url("../img/header-bg.jpg")
     background-position: center top
 
@@ -28,7 +32,7 @@ header
     display: flex
     justify-content: center
     align-items: center
-    margin-bottom: 20px
+    margin-bottom: 30px
     text-decoration: none
     column-gap: 12px
     font-size: 30rem
@@ -39,11 +43,15 @@ header
     font-family: "Maven Pro"
 
 header .menu
+
     ul
         display: flex
         flex-direction: column
         align-items: center
         gap: 15px
+        +media(1024px)    
+            gap: 50px
+        
     a
         position: relative
         text-decoration: none
@@ -65,10 +73,13 @@ header .menu
             width: 100%
 
 .header-title
+    text-align: center
+
     div
         display: flex
         flex-direction: column
         text-align: center
+        margin-bottom: 120px
 
     .marketing_analytics
         max-width: 355px
@@ -85,6 +96,7 @@ header .menu
             color: #ffffff
             font-weight: 700
             font-family: "Maven Pro"
+
             &:before
                 content: ''
                 position: absolute
@@ -93,6 +105,7 @@ header .menu
                 width: 24px
                 height: 1px
                 background-color: #fff
+
             &:after
                 content: ''
                 position: absolute
@@ -109,6 +122,8 @@ header .menu
         font-weight: 500
         font-family: "Maven Pro"
         margin-bottom: 15px
+        +media(768px)
+            font-size: 86rem
 
     p
         font-size: 16rem
@@ -121,3 +136,41 @@ header .menu
     .header-info
         max-width: 400px
         margin: auto
+
+.header-arrow
+    display: inline-block
+    padding: 15px 18px
+    border-radius: 50%
+    background-color: #fff
+    border: 1px solid #fff
+    transition: 0.3s
+
+    i
+        transition: 0.3s
+        color: #9fa4af
+
+    &:hover
+        border: 1px solid #000
+
+        i
+            color: #000
+
++media(768px)
+    
+    nav
+        display: flex
+        justify-content: space-between
+
+    header .menu
+        display: flex
+        align-items: flex-start
+
+        ul
+            display: flex
+            flex-direction: unset
+            align-items: center
+            height: 100%
+    
+    .logo
+        height: 100%
+        margin: 0
