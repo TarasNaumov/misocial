@@ -17,13 +17,17 @@ html(lang="uk")
         include components/header.pug
 
         main 
-            div 
+            div.main-title-container
                 .marketing_analytics
                     p SOCIAL MARKETING & ANALYTICS
 
                 p.main-title Select a Plan
 
-                .header-info
+                .main-info
                     p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.
-
+            
+            +card("shuttle", "img/shuttle.png", "0")
+            +card("rover", "img/rover.png", "29")
+            +card("rocket", "img/rocket.png", "49")
+                
         include components/footer.pug
