@@ -26,8 +26,9 @@ html(lang="uk")
                 .main-info
                     p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.
             
-            +card("shuttle", "img/shuttle.png", "0")
-            +card("rover", "img/rover.png", "29")
-            +card("rocket", "img/rocket.png", "49")
+            .card-container
+                +card("shuttle", "img/shuttle.png", "0")
+                +card("rover", "img/rover.png", "29")
+                +card("rocket", "img/rocket.png", "49")
                 
         include components/footer.pug

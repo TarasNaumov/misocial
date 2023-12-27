@@ -139,6 +139,7 @@ header .menu
         margin: auto
 
 .main-title-container
+    margin-bottom: 100px
     p
         color: #9fa4af
 
@@ -204,6 +205,25 @@ header .menu
 
 main
     padding-top: 120px
+
+.card-container
+    display: flex
+    flex-direction: column
+    gap: 50px
+
+.card
+    width: 90%
+    margin: auto
+    border: 1px solid #d7dbe8
+    border-radius: 30px
+    padding: 60px 70px
+    text-align: center
+    transition: 0.3s
+    +media(768px)
+        width: 33%
+
+.card:hover
+    box-shadow: 0 0 46px rgba(204, 204, 223, 0.71)
 
 +media(991px)
 
