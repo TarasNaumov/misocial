@@ -10,6 +10,8 @@ ul
 
 html
     font-size: 1px
+    +media(2560px)
+        font-size: 1.5px
 
 body
     font-size: 14rem
@@ -51,26 +53,46 @@ header .menu
         gap: 15px
         +media(1024px)
             gap: 50px
+        
+        li:last-child
+            a
+                padding: 15px 30px
+                border-radius: 25px
+                border: 2px solid #fff
+                transition: 0.3s
+                font-size: 12rem
+                letter-spacing: 1rem
+                line-height: 32rem
+                text-decoration: none
+                text-transform: uppercase
+                color: #fff
+                font-weight: 700
+                font-family: "Maven Pro"
+                text-align: center
+                &:hover
+                    background-color: #fff
+                    color: #6e45e2
 
-    a
-        position: relative
-        text-decoration: none
-        font-size: 16rem
-        line-height: 19rem
-        color: #fff
-        font-weight: 500
-        font-family: "Maven Pro"
-        &:before
-            content: ''
-            position: absolute
-            bottom: -8px
-            width: 0
-            height: 3px
-            background-color: #fff
-            transition: 0.5s
+    li:not(:last-child)
+        a
+            position: relative
+            text-decoration: none
+            font-size: 16rem
+            line-height: 19rem
+            color: #fff
+            font-weight: 500
+            font-family: "Maven Pro"
+            &:before
+                content: ''
+                position: absolute
+                bottom: -8px
+                width: 0
+                height: 3px
+                background-color: #fff
+                transition: 0.5s
 
-        &:hover:before
-            width: 100%
+            &:hover:before
+                width: 100%
 
 .header-title,
 .main-title-container
@@ -203,44 +225,3 @@ header .menu
         i
             color: #000
 
-main
-    padding-top: 120px
-
-.card-container
-    display: flex
-    flex-direction: column
-    gap: 50px
-
-.card
-    width: 90%
-    margin: auto
-    border: 1px solid #d7dbe8
-    border-radius: 30px
-    padding: 60px 70px
-    text-align: center
-    transition: 0.3s
-    +media(768px)
-        width: 33%
-
-.card:hover
-    box-shadow: 0 0 46px rgba(204, 204, 223, 0.71)
-
-+media(991px)
-
-    nav
-        display: flex
-        justify-content: space-between
-
-    header .menu
-        display: flex
-        align-items: flex-start
-
-        ul
-            display: flex
-            flex-direction: unset
-            align-items: center
-            height: 100%
-
-    .logo
-        height: 100%
-        margin: 0

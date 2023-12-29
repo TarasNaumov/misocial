@@ -1,5 +1,165 @@
 @import helpers/vars
 @import helpers/mixins
-  
+
+
+main
+    padding-top: 120px
+
+.card-container
+    margin-bottom: 50px
+    +media(1024px)
+        margin-bottom: 100px
+    .wrapper
+        display: flex
+        flex-direction: column
+        gap: 50px
+        +media(1024px)
+            flex-direction: unset
+
+.card
+    width: 90%
+    margin: auto
+    border: 1px solid #d7dbe8
+    border-radius: 30px
+    padding: 60px 20px
+    text-align: center
+    transition: 0.3s
+    +media(768px)
+        width: 50%
+        padding: 60px 40px
+    +media(1024px)
+        width: 40%
+    +media(1920px)
+        width: 25%
+        padding: 60px 70px
+
+
+.card-name
+    font-size: 14rem
+    letter-spacing: 1rem
+    line-height: 32px
+    text-transform: uppercase
+    color: #9fa4af
+    font-weight: 700
+    font-family: "Maven Pro"
+
+.card .price
+    font-size: 60px
+    letter-spacing: -2px
+    line-height: 72px
+    color: #4f4f6f
+    font-weight: 500
+    font-family: "Maven Pro"
+    text-align: center
+    sup
+        font-size: 15rem
+    span
+        font-size: 25rem
+
+.card-info
+    font-size: 16rem
+    line-height: 28rem
+    color: #9fa4af
+    font-weight: 400
+    font-family: "Maven Pro"
+    margin-bottom: 30px
+
+.card:hover
+    box-shadow: 0 0 46px rgba(204, 204, 223, 0.71)
+
+.card a
+    display: inline-block
+    padding: 12px 55px
+    border-radius: 25px
+    border: 1px solid #d7dbe8
+    box-shadow: 0 0 10.5px rgba(204,204,223,0.5)
+    font-size: 12rem
+    letter-spacing: 1rem
+    line-height: 32rem
+    color: #c2c9db
+    text-transform: uppercase
+    text-decoration: none
+    font-weight: 700
+    font-family: "Maven Pro"
+    transition: 0.3s
+    text-align: center
+
+    &:hover
+        background-color: #6e45e2
+        color: #fff
+
++media(991px)
+
+    nav
+        display: flex
+        justify-content: space-between
+
+    header .menu
+        display: flex
+        align-items: flex-start
+
+        ul
+            display: flex
+            flex-direction: unset
+            align-items: center
+            height: 100%
+
+    .logo
+        height: 100%
+        margin: 0
+
+.map
+    padding: 170px 0
+    background: linear-gradient(-60deg, rgba(113, 86, 224, 0.8), rgba(134, 198, 208, 0.8)), url("../img/map.png")
+    div
+        margin: auto
+        width: 90%
+        text-align: center
+
+        .marketing_analytics
+            font-size: 14rem
+            letter-spacing: 1rem
+            line-height: 32rem
+            text-transform: uppercase
+            color: #fff
+            font-weight: 700
+            font-family: "Maven Pro"
+            margin-bottom: 24px
+        p:nth-child(2)
+            font-size: 60rem
+            letter-spacing: -2rem
+            line-height: 72rem
+            color: #fff
+            font-weight: 500
+            font-family: "Maven Pro"
+            margin-bottom: 18px
+
+        .map-button
+            display: flex
+            flex-direction: column
+            justify-content: center
+            gap: 10px
+            a
+                font-size: 12rem
+                letter-spacing: 1rem
+                line-height: 32rem
+                text-transform: uppercase
+                color: #c2c9db
+                font-weight: 700
+                font-family: "Maven Pro"
+                text-decoration: none
+                padding: 10px 30px
+                border-radius: 25px
+                box-shadow: 0 0 10.5px rgba(204,204,223,0.5)
+                background-color: #fff
+                border: 1px solid #d7dbe8
+                transition: 0.3s
+                &:hover
+                    background-color: #6e45e2
+                    color: #fff
+            +media(768px)
+                flex-direction: unset
+
+
 @import  components/header
 @import  components/footer

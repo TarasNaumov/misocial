@@ -27,8 +27,17 @@ html(lang="uk")
                     p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.
             
             .card-container
-                +card("shuttle", "img/shuttle.png", "0")
-                +card("rover", "img/rover.png", "29")
-                +card("rocket", "img/rocket.png", "49")
+                .wrapper
+                    +card("shuttle", "img/shuttle.png", "0")
+                    +card("rover", "img/rover.png", "29")
+                    +card("rocket", "img/rocket.png", "49")
+
+            .map
+                div
+                    p.marketing_analytics SOCAL MARKETING & ANALYTICS
+                    p Take control of your data
+                    div.map-button
+                        a(href="#") get started
+                        a(href="#") explore features
                 
         include components/footer.pug

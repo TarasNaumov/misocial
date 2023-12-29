@@ -14,15 +14,18 @@ mixin menu
         a(href="#") Articles
       li
         a(href="#") Pricing
-      a(href="#") get started
+      li
+        a(href="#") get started
 
 mixin card(altText, imagePath, price)
   div.card
     img(src=imagePath, alt=altText)
-    h2.card-name personal
-    p.price
-      sup $
-      | #{price}
-      | /month
-    p.card-info Lorem ipsum dolor sit amet. sed do eiusmod tempor incididunt ut. Labore et dolore magna aliqua. quis nostrud exercitation ullamco laboris.
-    a(href="#") select plan
+    div
+      h2.card-name personal
+      p.price
+        sup $
+        | #{price}
+        span
+          | /month
+      p.card-info Lorem ipsum dolor sit amet. sed do eiusmod tempor incididunt ut. Labore et dolore magna aliqua. quis nostrud exercitation ullamco laboris.
+      a(href="#") select plan
