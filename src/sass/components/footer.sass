@@ -23,26 +23,26 @@ footer
             display: flex
             justify-content: space-between
             flex-direction: column
-            gap: 40px
+            gap: 20px
             padding-bottom: 26px
             p
                 opacity: 0.502
                 font-size: 14px
                 line-height: 19px
                 color: #6a6a77
+                text-align: center
                 font-weight: 500
                 font-family: "Maven Pro"
+                +media(768px)
+                    text-align: left
             .soc
                 display: flex
                 column-gap: 17px
-                a
-                    i
-                        color: #6a6a77
-                        transition: 0.3s
-                        &:hover
-                            color: #6e45e2
+                margin: auto
+                +media(768px)
+                    margin: unset
                         
-            +media(991px)
+            +media(768px)
                 flex-direction: unset
 
     .menu
@@ -59,7 +59,7 @@ footer
                 a
                     padding: 15px 30px
                     border-radius: 25px
-                    border: 2px solid #6e45e2
+                    border: 1px solid #6a6a77
                     transition: 0.3s
                     font-size: 12rem
                     letter-spacing: 1rem
@@ -71,6 +71,7 @@ footer
                     font-family: "Maven Pro"
                     text-align: center
                     &:hover
+                        border-color: #6e45e2
                         background-color: #6e45e2
                         color: #fff
 

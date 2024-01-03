@@ -5,6 +5,9 @@
     padding: 0
     box-sizing: border-box
 
+.hidden
+    display: none
+
 ul
     list-style: none
 
@@ -27,7 +30,7 @@ body
 
 header
     padding: 40px 0
-    background: linear-gradient(-60deg, rgba(113, 86, 224, 0.8), rgba(134, 198, 208, 0.8)), url("../img/header-bg.jpg")
+    background: $bg-gradient, url("../img/header-bg.jpg")
     background-position: center top
 
 .logo
@@ -71,7 +74,7 @@ header .menu
                 text-align: center
                 &:hover
                     background-color: #fff
-                    color: #6e45e2
+                    color: transparent
 
     li:not(:last-child)
         a
@@ -169,13 +172,13 @@ header .menu
         color: #9fa4af
 
         &:before
-                content: ''
-                position: absolute
-                top: 50%
-                left: 0
-                width: 24px
-                height: 1px
-                background-color: #6e45e2
+            content: ''
+            position: absolute
+            top: 50%
+            left: 0
+            width: 24px
+            height: 1px
+            background-color: $primary
 
         &:after
             content: ''
@@ -184,7 +187,7 @@ header .menu
             right: 0
             width: 24px
             height: 1px
-            background-color: #6e45e2
+            background-color: $primary
 
     
     .main-title
