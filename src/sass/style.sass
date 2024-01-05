@@ -29,6 +29,10 @@ hr
     padding: 60px 20px
     text-align: center
     transition: 0.3s
+    img
+        margin-bottom: 20px
+        +media(768px)
+        margin-bottom: 50px
     +media(768px)
         width: 50%
         padding: 60px 40px
@@ -47,8 +51,12 @@ hr
     color: #9fa4af
     font-weight: 700
     font-family: "Maven Pro"
+    margin-bottom: 10px
 
 .card .price
+    position: relative
+    display: inline-block
+    padding-left: 10px
     font-size: 60px
     letter-spacing: -2px
     line-height: 72px
@@ -57,6 +65,9 @@ hr
     font-family: "Maven Pro"
     text-align: center
     sup
+        position: absolute
+        top: -15px
+        left: 0
         font-size: 15rem
     span
         font-size: 25rem
@@ -92,27 +103,6 @@ hr
     &:hover
         background-color: #6e45e2
         color: #fff
-
-+media(991px)
-
-    nav
-        display: flex
-        justify-content: space-between
-
-    header .menu,
-    footer .menu
-        display: flex
-        align-items: flex-start
-
-        ul
-            display: flex
-            flex-direction: unset
-            align-items: center
-            height: 100%
-
-    .logo
-        height: 100%
-        margin: 0
 
 .map
     padding: 170px 0
@@ -154,12 +144,13 @@ hr
                 font-weight: 700
                 font-family: "Maven Pro"
                 text-decoration: none
-                padding: 10px 30px
+                padding: 10px 32px
                 border-radius: 25px
-                box-shadow: 0 0 10.5px rgba(204,204,223,0.5)
                 background-color: #fff
-                border: 1px solid #d7dbe8
                 transition: 0.3s
+                &:nth-child(1)
+                    padding: 10px 53px
+                    
                 &:hover
                     background-color: #6e45e2
                     color: #fff
@@ -187,7 +178,26 @@ hr
     width: 23px
     height: 23px
         
-    
++media(991px)
+
+    nav
+        display: flex
+        justify-content: space-between
+
+    header .menu,
+    footer .menu
+        display: flex
+        align-items: flex-start
+
+        ul
+            display: flex
+            flex-direction: unset
+            align-items: center
+            height: 100%
+
+    .logo
+        height: 100%
+        margin: 0
 
 
 @import  components/header
