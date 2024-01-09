@@ -12,7 +12,9 @@ ul
     list-style: none
 
 html
-    font-size: 1px
+    font-size: 0.8px
+    +media(400px)
+        font-size: 1px
     +media(2560px)
         font-size: 1.5px
 
@@ -26,12 +28,19 @@ body
         width: calc(100% - 50px)
 
 .header-line
-    margin-bottom: 60px
+    margin-bottom: 80px
+    +media(1024px)
+        margin-bottom: 180px
 
 header
     padding: 40px 0
-    background: $bg-gradient, url("../img/header-bg.jpg")
+    background: $bg-gradient, url("../img/header-bg.jpg") no-repeat
+    background-size: cover
     background-position: center top
+
+nav
+    display: flex
+    justify-content: space-between
 
 .logo
     display: flex
@@ -47,14 +56,28 @@ header
     font-weight: 700
     font-family: "Maven Pro"
 
+.burger
+    width: 50px
+    height: 50px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    span
+        display: block
+        width: 100%
+        height: 6px
+        background-color: $light
+    +media(1024px)
+        display: none
+
 header .menu
 
     ul
-        display: flex
-        flex-direction: column
-        align-items: center
-        gap: 15px
+        display: none
         +media(1024px)
+            display: flex
+            align-items: center
+            height: 100%
             gap: 50px
         
         li:last-child
@@ -147,7 +170,7 @@ header .menu
         color: #fff
         font-weight: 500
         font-family: "Maven Pro"
-        margin-bottom: 15px
+        margin-bottom: 22px
         +media(768px)
             font-size: 86rem
 
@@ -201,7 +224,7 @@ header .menu
         color: #4f4f6f
         font-weight: 500
         font-family: "Maven Pro"
-        margin-bottom: 15px
+        margin-bottom: 22px
         +media(768px)
             font-size: 86rem
 
@@ -228,7 +251,7 @@ header .menu
         color: #9fa4af
 
     &:hover
-        border: 1px solid #000
+        box-shadow: 0 0 10.5px rgba(0, 0, 255, 0.5)
 
         i
             color: #000
