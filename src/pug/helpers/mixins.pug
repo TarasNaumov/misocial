@@ -23,7 +23,8 @@ mixin menu
 
 mixin card(altText, imagePath, price)
   div.card
-    img(src=imagePath, alt=altText)
+    div.card-img
+      img(src=imagePath, alt=altText)
     div
       h2.card-name personal
       p.price

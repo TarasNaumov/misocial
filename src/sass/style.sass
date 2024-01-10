@@ -29,11 +29,19 @@ hr
     padding: 60px 20px
     text-align: center
     transition: 0.3s
+    .card-img
+        display: flex
+        justify-content: center
+        align-items: center
     img
-        width: 50%
         margin-bottom: 20px
         +media(768px)
+            width: 150px
+            height: 150px
             margin-bottom: 50px
+        +media(1024px)
+            width: unset
+            height: unset
     div
         width: 100%
         +media(768px)
@@ -177,17 +185,33 @@ hr
     &:hover
         fill: #6e45e2
 .inst
-    width: 15px
-    height: 15px
+    width: 30px
+    height: 30px
+    +media(1024px)
+        height: 15px
+        width: 15px
+
 .fb
-    width: 14px
-    height: 16px
+    width: 28px
+    height: 32px
+    +media(1024px)
+        height: 16px
+        width: 14px
+
 .tw
-    width: 15px
-    height: 15px
+    width: 30px
+    height: 30px
+    +media(1024px)
+        height: 15px
+        width: 15px
+
 .google
-    width: 23px
-    height: 23px
+    width: 46px
+    height: 46px
+    +media(1024px)
+        height: 23px
+        width: 23px
+
         
 +media(991px)
 
